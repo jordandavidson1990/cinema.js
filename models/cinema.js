@@ -8,13 +8,16 @@ Cinema.prototype.getTitle = function(){
   });
   return result
 }
+// One liner below
+// return this.films.map(film => film.title);}
 
 Cinema.prototype.findTitle = function(searchTitle){
   const result = this.films.find((film) =>{
     return film.title.toLowerCase() === searchTitle.toLowerCase()
   });
-  return result.title
+  return result
 }
+
 
 Cinema.prototype.findByGenre = function(genre){
   const result = this.films.filter((film) =>{
@@ -31,9 +34,10 @@ Cinema.prototype.findByYear = function(year){
 };
 
 Cinema.prototype.checkByYear = function(year){
-  const result = this.films.includes((film) =>{
-    return 
-  })
+  const result = this.films.includes((film) => {
+    return film.year === year;
+  });
+  return result
 
 }
 
